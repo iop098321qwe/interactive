@@ -4,8 +4,12 @@
 # INTERACTIVE ALIASES
 ################################################################################
 
-alias cp='cp -i'
-alias ln='ln -i'
-alias mv='mv -i'
-alias rm='rm -I'
-alias rma='rm -rfI'
+case $- in
+  *i*)
+    alias cp='cp -i'
+    alias ln='ln -i'
+    alias mv='mv -i'
+    alias rm='rm -I'
+    alias rma='rm -rfI'
+  ;;
+esac
